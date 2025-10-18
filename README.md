@@ -31,6 +31,10 @@ At the end of this process, you’ll have three essential binary files for your 
 
 ![Collision Map](images/collision_map_example.png)
 
+5. Use 'CompImage.py' tool to select the main map first, then the collision map, and overlay them to visually verify that both align correctly.
+
+![Collision Map](images/CompImage.png)
+
 ---
 
 ## ⚙️ 3. Convert the Collision Map to Binary
@@ -53,6 +57,7 @@ Then:
 Output → `nav_matrix.dat`
 
 ![Binary Conversion Step ](images/binary_conversion_example1.png)
+![Binary Conversion Result ](images/binary_conversion_example2.png)
 ---
 
 ## 🧭 4. Draw Navigation Nodes
