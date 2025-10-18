@@ -40,6 +40,7 @@ Use 'ImgConv.py' converter tool to transform each pixel into binary values:
 First 4 bytes:
 
 [2 bytes] → Width = 640
+
 [2 bytes] → Height = 472
 
 Then:
