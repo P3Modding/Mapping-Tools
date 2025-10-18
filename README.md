@@ -132,5 +132,3 @@ If something is wrong:
 Move those files in navdata
 
 Enjoy!
-
-![Summary](images/readme_overview.png)
