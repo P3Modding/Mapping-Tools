@@ -24,14 +24,14 @@ At the end of this process, you’ll have three essential binary files for your 
 
 1. Create a **640×472** image.
 2. Use:
-   - **Black (0)** = Land
-   - **Blue (1)** = Water
+   - **Black (1)** = Land
+   - **Blue (0)** = Water
 3. Exclude the 64px borders.
 4. Save as `collision_map.png`.
 
 ![Collision Map](images/collision_map_example.png)
 
-5. Use 'CompImage.py' tool to select the main map first, then the collision map, and overlay them to visually verify that both align correctly.
+5. Use **'CompImage.py'** tool to select the main map first, then the collision map, and overlay them to visually verify that both align correctly.
 
 ![Collision Map](images/CompImage.png)
 
@@ -39,7 +39,7 @@ At the end of this process, you’ll have three essential binary files for your 
 
 ## ⚙️ 3. Convert the Collision Map to Binary
 
-Use 'ImgConv.py' converter tool to transform each pixel into binary values:
+Use **'ImgConv.py'** converter tool to transform each pixel into binary values:
 
 First 4 bytes:
 
@@ -57,6 +57,8 @@ Then:
 Output → `nav_matrix.dat`
 
 ![Binary Conversion Step ](images/binary_conversion_example1.png)
+
+
 ![Binary Conversion Result ](images/binary_conversion_example2.png)
 ---
 
