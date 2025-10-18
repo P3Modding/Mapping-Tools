@@ -35,7 +35,14 @@ At the end of this process, you’ll have three essential binary files for your 
 
 ## ⚙️ 3. Convert the Collision Map to Binary
 
-Use a converter tool (or the provided script) to transform each pixel into binary values:
+Use 'ImgConv.py' converter tool to transform each pixel into binary values:
+
+First 4 bytes:
+
+[2 bytes] → Width = 640
+[2 bytes] → Height = 472
+
+Then:
 
 | Color | Binary |
 |--------|--------|
@@ -45,7 +52,6 @@ Use a converter tool (or the provided script) to transform each pixel into binar
 Output → `nav_matrix.dat`
 
 ![Binary Conversion Step ](images/binary_conversion_example1.png)
-![Binary Conversion Result](images/binary_conversion_example2.png)
 ---
 
 ## 🧭 4. Draw Navigation Nodes
