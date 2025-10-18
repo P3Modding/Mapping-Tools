@@ -44,8 +44,8 @@ Use a converter tool (or the provided script) to transform each pixel into binar
 
 Output → `nav_matrix.dat`
 
-![Binary Conversion](images/binary_conversion_example1.png)
-![Binary Conversion](images/binary_conversion_example2.png)
+![Binary Conversion Step ](images/binary_conversion_example1.png)
+![Binary Conversion Result](images/binary_conversion_example2.png)
 ---
 
 ## 🧭 4. Draw Navigation Nodes
