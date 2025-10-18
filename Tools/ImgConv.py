@@ -17,7 +17,7 @@ def classify_pixel(r, g, b):
         return 0x01  # everything else treated as land
 
 def bmp_to_dat(bmp_path):
-    """Convert BMP → DAT using fixed 640x472 size."""
+    """Convert BMP → nav_matrix.dat using fixed 640x472 size."""
     img = Image.open(bmp_path).convert("RGB")
     img = img.resize((FIXED_WIDTH, FIXED_HEIGHT))  # force fixed resolution
     pixels = list(img.getdata())
@@ -29,7 +29,10 @@ def bmp_to_dat(bmp_path):
     for r, g, b in pixels:
         binary_data.append(classify_pixel(r, g, b))
 
-    dat_path = os.path.splitext(bmp_path)[0] + ".dat"
+    # Always save as nav_matrix.dat in the same directory as the input file
+    output_dir = os.path.dirname(bmp_path)
+    dat_path = os.path.join(output_dir, "nav_matrix.dat")
+
     with open(dat_path, "wb") as f:
         f.write(binary_data)
 

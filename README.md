@@ -54,7 +54,7 @@ Then:
 | Black | 00 |
 | Blue  | 01 |
 
-Output → `nav_matrix.dat`
+Output to be renamed in → `nav_matrix.dat` 
 
 ![Binary Conversion Step ](images/binary_conversion_example1.png)
 
@@ -66,7 +66,7 @@ Output → `nav_matrix.dat`
 
 1. Launch **Mapmaker.py**.
 2. Click to place nodes on **water only (blue)**.
-3. Max ~350 nodes.
+3. Default ~350 nodes.
 4. Right-click to remove or drag to move.
 
 ![Node Placement](images/nodes_example.png)
@@ -132,6 +132,5 @@ If something is wrong:
 Move those files in navdata
 
 Enjoy!
-
 
 ![Summary](images/readme_overview.png)
