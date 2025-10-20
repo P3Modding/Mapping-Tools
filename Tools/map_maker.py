@@ -231,22 +231,42 @@ class NavPointEditor:
         print(f"Saved {len(self.points)} points to {VEC_FILE}")
 
     def load_last_save(self):
-        """Load last saved points from file"""
+        """Load last saved points from file and reorder them by distance"""
         try:
             with open(VEC_FILE, "rb") as f:
                 data = f.read()
                 num_points = struct.unpack("<H", data[:2])[0]
-                self.points.clear()
+                raw_points = []
                 
                 for i in range(num_points):
                     offset = 4 + i * 4
                     x, y = struct.unpack("<2H", data[offset:offset+4])
-                    self.points.append((x, y))
+                    raw_points.append((x, y))
                 
+                if not raw_points:
+                    messagebox.showinfo("Info", "No points found in file.")
+                    return
+
+                # --- Riordina i punti in base alla distanza (nearest neighbor) ---
+                ordered = [raw_points[0]]
+                remaining = raw_points[1:]
+                
+                while remaining:
+                    last_x, last_y = ordered[-1]
+                    # Trova il punto più vicino
+                    next_point = min(remaining, key=lambda p: math.hypot(p[0] - last_x, p[1] - last_y))
+                    ordered.append(next_point)
+                    remaining.remove(next_point)
+
+                # Aggiorna lista punti e disegna
+                self.points = ordered
                 self.draw_points()
-                print(f"Loaded {num_points} points from last save")
+
+                print(f"Loaded and reordered {num_points} points from last save (by nearest distance)")
+
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load points: {str(e)}")
+
 
     def generate_matrix_file(self):
         num_points = len(self.points)
@@ -342,10 +362,28 @@ class NavPointEditor:
             path.append(j)
             j = prev[j]
         return path[::-1]
+    def reorder_points_by_distance(self):
+        """Riordina i punti esistenti in base alla distanza progressiva (nearest neighbor)"""
+        if not self.points:
+            return
+        
+        ordered = [self.points[0]]
+        remaining = self.points[1:]
+        
+        while remaining:
+            last_x, last_y = ordered[-1]
+            next_point = min(remaining, key=lambda p: math.hypot(p[0] - last_x, p[1] - last_y))
+            ordered.append(next_point)
+            remaining.remove(next_point)
+        
+        self.points = ordered
+        self.draw_points()
+        print(f"🔄 Points reordered by nearest distance before verification ({len(self.points)} total)")
 
     def verify_all_points(self):
         """Verify connectivity between all points"""
         print("\n=== Full Connectivity Verification ===")
+        self.reorder_points_by_distance()
         num_points = len(self.points)
         
         # Build connectivity matrix
