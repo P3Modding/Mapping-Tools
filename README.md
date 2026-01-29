@@ -27,7 +27,7 @@ At the end of this process, you’ll have three essential binary files for your 
    - **Black (1)** = Land
    - **Blue  (0)** = Water
 3. Exclude the 64px borders.
-4. Save as `collision_map.png`.
+4. Save as `collision_map.bmp`.
 
 ![Collision Map](images/collision_map_example.png)
 
