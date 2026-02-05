@@ -88,11 +88,12 @@ Inside the nav editing/generation tool:
 2. Load the BMP map (2400×1800) and the current INI (if you need it as a base).
 3. Move each city to the correct position.
 
-> **Note (from the images):** all cities must be placed on **water** or on a **non-collidable** part of the map.
+> **Note: ** all cities must be placed on **water** or on a **non-collidable** part of the map.
 
 Practical tips:
-- Enable point visualization (if available) to avoid invalid areas.
 - After each move, double-check that the icon/name is not placed on land/obstacles.
+
+![Electron Step 2 ](images/electron_3.jpg)
 
 ✅ Expected output: all cities correctly repositioned.
 
