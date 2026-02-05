@@ -38,7 +38,7 @@ This guide summarizes **Steps 1–6** shown in the images to regenerate and inst
 
 1. Starting from the same playable area, generate the collision map **scaled down** to **640×472**.
 2. **No borders** (so do NOT include the 64px frame).
-3. Make sure 
+3. Make sure you color as BLACK the Land, and as Blue the Water
 
 ✅ Expected output: a 640×472 collision image without borders.
 
@@ -57,7 +57,7 @@ Quick checklist:
 - Does the tool generate the file without errors?
 
 ✅ Expected output: `nav_matrix.dat` ready.
-
+![Collision Map](images/CompImage.png)
 ---
 
 ## Step 4 — Export and replace `nav_vec` and `matrix_int` (and also `nav_matrix`)
