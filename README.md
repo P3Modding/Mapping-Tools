@@ -61,7 +61,7 @@ Quick checklist:
 
 ## Step 4 — Export and replace `nav_vec` and `matrix_int` (and also `nav_matrix`)
 
-Inside the nav editing/generation tool:
+Inside the **NavPointEditor.exe**:
 
 1. Load the file using **Load nav_matrix** → click **Generate Contour Points** using the recommended settings (**Spacing = 3**, **minDist from land = 4**).
 
@@ -84,7 +84,7 @@ Inside the nav editing/generation tool:
 
 ## Step 5 — Move all cities onto the correct points (CityMapEditor)
 
-1. Open **CityMapEditor**.
+1. Open **CityMapEditor.exe**.
 2. Load the BMP map (2400×1800) and the current INI (if you need it as a base).
 3. Move each city to the correct position.
 
