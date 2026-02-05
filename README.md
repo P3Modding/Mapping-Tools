@@ -38,9 +38,11 @@ This guide summarizes **Steps 1–6** shown in the images to regenerate and inst
 
 1. Starting from the same playable area, generate the collision map **scaled down** to **640×472**.
 2. **No borders** (so do NOT include the 64px frame).
-3. Make sure colors/values match what the converter expects (land/sea/obstacles).
+3. Make sure 
 
 ✅ Expected output: a 640×472 collision image without borders.
+
+![Collision Map](images/collision_map_example.png)
 
 ---
 
