@@ -57,7 +57,7 @@ Quick checklist:
 - Does the tool generate the file without errors?
 
 ✅ Expected output: `nav_matrix.dat` ready.
-![Collision Map](images/CompImage.png)
+![Binary Conversion Step ](images/binary_conversion_example1.png)
 ---
 
 ## Step 4 — Export and replace `nav_vec` and `matrix_int` (and also `nav_matrix`)
