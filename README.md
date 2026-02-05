@@ -28,7 +28,7 @@ This guide summarizes **Steps 1–6** shown in the images to regenerate and inst
 
 1. Prepare the new map image with size **2400×1800**.
 2. Keep the **64px borders** (frame) included in the image.
-3. Export as BMP (or whatever format your tool/pipeline requires).
+3. Export as BMP.
 
 ✅ Expected output: a 2400×1800 map with a 64px border frame.
 ![Main Map](images/main_map_example.png)
@@ -53,10 +53,9 @@ This guide summarizes **Steps 1–6** shown in the images to regenerate and inst
 
 Quick checklist:
 - Is the source really 640×472?
-- Is the output file name exactly `nav_matrix.dat`?
-- Does the tool generate the file without errors?
 
 ✅ Expected output: `nav_matrix.dat` ready.
+
 ![Binary Conversion Step ](images/binary_conversion_example1.png)
 ---
 
