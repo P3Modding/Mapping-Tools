@@ -64,6 +64,13 @@ Quick checklist:
 Inside the nav editing/generation tool:
 
 1. Load the file using **Load nav_matrix** → click **Generate Contour Points** using the recommended settings (**Spacing = 3**, **minDist from land = 4**).
+
+![Electron Step 1 ](images/electron_1.png)
+
+
+![Electron Step 2 ](images/electron_2.png)
+
+
 2. Use **Export nav_vec** → generates `nav_vec.dat`.
 3. Use **Export matrix_int** → generates `matrix_int.dat`.
 4. Copy and **replace** in `Patrician3\navdata\`:
@@ -73,10 +80,6 @@ Inside the nav editing/generation tool:
 
 ✅ Expected output: `Patrician3\navdata\` contains all 3 updated files.
 
-![Electron Step 1 ](images/electron_1.png)
-
-
-![Electron Step 2 ](images/electron_2.png)
 ---
 
 ## Step 5 — Move all cities onto the correct points (CityMapEditor)
