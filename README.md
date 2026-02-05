@@ -31,7 +31,7 @@ This guide summarizes **Steps 1–6** shown in the images to regenerate and inst
 3. Export as BMP (or whatever format your tool/pipeline requires).
 
 ✅ Expected output: a 2400×1800 map with a 64px border frame.
-
+![Main Map](images/main_map_example.png)
 ---
 
 ## Step 2 — Create the 640×472 collision map WITHOUT borders
