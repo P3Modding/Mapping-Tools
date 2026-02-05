@@ -112,7 +112,7 @@ Practical tips:
 ## Final checks (recommended)
 
 - The game starts without crashing.
-- Cities are clickable and do not “sink” into invalid tiles.
+- Cities are clickable
 - Sea routes can find paths (no total blockage).
 - If routes become impossible:
   - check `nav_matrix.dat` (collision),
@@ -147,12 +147,8 @@ You can store them in a folder like:
 
 ---
 
-If you want, I can also:
-- add a **Troubleshooting** section with common issues (crashes, invisible cities, blocked routes),
-- or adapt the guide to your **exact** tool/file names (if they differ).
 
-
-OLD METHOD!
+OLD METHOD [Python]!
 # 🌊 Nav Point Editor – Navigation Map Creation Guide
 
 This guide explains how to create a **2D navigation map system** for water-based movement using the **Nav Point Editor** tool.
